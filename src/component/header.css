@@ -15,6 +15,11 @@
 .mail
 {
     display: flex;
+    align-items: center;
+}
+.mail-text.visited{
+    color: #fb2e86;;
+
 }
 .mail-text{
 color: #F1F1F1;
@@ -29,9 +34,11 @@ line-height: normal;
 .call{
     display: flex;
     padding-left: 48px;
+    align-items: center;
 }
 .call-text{
     padding-left: 10px;
+    font-size: 16px;
     width: 97px;
     height:16px;
 }
@@ -51,24 +58,28 @@ line-height: normal;
 }
 .Eng{
     display: flex;
+    align-items: center;
 }
 .USD{
     display: flex;
+    align-items: center;
 }
-.Login{
+.login-icon{
     display: flex;
+    align-items: center;
     
     
 }
 .whish{
     display: flex;
+    align-items: center;
+    font-size: 16px;
     gap:10px
 }
 .cart{
     display: flex;
     width: 24px;
     height: 24px;
-    justify-content: center;
     align-items: center;
     flex-shrink: 0;
 }

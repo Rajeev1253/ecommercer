@@ -11,10 +11,10 @@ export default function Header() {
       <div className="headerTop">
         <div className="header-left">
           <div class="mail">
-            <MailOutlineIcon />
+            <MailOutlineIcon sx={{width:16,height:16}} />
             <p className="mail-text">mhhasanul@gmail.com</p>
             <div className="call">
-              <CallIcon />
+              <CallIcon sx={{width:16,height:16}} />
               <p className="call-text">(12345)67890</p>
             </div>
           </div>
@@ -28,7 +28,7 @@ export default function Header() {
             <p>USD</p>
             <KeyboardArrowDownIcon />
           </div>
-          <div className="Login">
+          <div className="login-icon">
             <p>Login</p>
           </div>
           <div className="whish">

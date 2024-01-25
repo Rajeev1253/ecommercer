@@ -6,7 +6,6 @@
   height: 600px;
   background: #fff;
   box-shadow: 0px 0px 25px 10px #f8f8fb;
-  border: 1px solid red;
   margin-top: 280px;
 }
 .inputBox {
@@ -61,7 +60,9 @@
     flex-shrink: 0;
     border-radius: 3px;
     background: #fb2e86;
-    color:#fff
+    border: 1px solid #fb2e86;
+    color:#fff;
+    font-size:16px
   }
   .user{
     padding-left: 55px;
@@ -71,5 +72,16 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
+
+  }
+  .already{
+    padding-top: 7px;
+    color: #9096b2;
+    font-family: Lato;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    text-align: center;
 
   }

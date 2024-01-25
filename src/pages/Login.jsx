@@ -4,17 +4,29 @@ import Navbar from "../component/Navbar";
 import image1 from '../assets/images/image 1174.png'
 import "./Login.css";
 import Footer from "../component/Footer";
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 import axios from 'axios';
 
 const Login = () => {
+  const navigate=useNavigate();
+  const [err, setErr] = useState("")
   const [email,setEmail]= useState("");
   const [password,setPassword]=useState("");
   const handleSubmit = async(e) => {
     e.preventDefault();
 
-    const loginUser = { email, password };
-      const loginRes = await axios.post("http://localhost:3001/login", loginUser);
+    const newUser = {email,password};
+    try {
+     const response = await axios.post("http://localhost:8080/api/users/login", newUser);
+     navigate('/')
+      console.log( response)
+    } catch (error) {
+      setErr( error.response.data.message)
+      console.log("err", error.response.data)
+      
+
+    }   
+   
   };
   return (
     <div>
@@ -32,7 +44,6 @@ const Login = () => {
       </div>
       <div className="Login">
       <div className="loginBox">
-      <form onSubmit={handleSubmit} action="POST">
       <div className="login-heading">
             <h3>Login</h3>
             <p>Please login using account detail bellow.</p>
@@ -41,14 +52,14 @@ const Login = () => {
             <input className="email" placeholder="Email Adress" onChange={(e)=>{setEmail(e.target.value)}}></input>
             <input className="password" placeholder="Password" onChange={(e)=>{setPassword(e.target.value)}}></input>
           </div>
+          <div>
+            {err && <p>{err}</p>}
+          </div>
           <span className="forget">Forget your Password</span>
           <Link className="forget" to='/Signup'>Sign up </Link>
           <div className="SignIn">
-          <button onSubmit={handleSubmit} className="sign-in">Sign</button>
+          <button onClick={handleSubmit} className="sign-in">Sign</button>
         </div>
-        
-      </form>
-      
         </div>
       </div>
       <div className="companies">

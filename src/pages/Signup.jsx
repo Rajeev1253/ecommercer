@@ -6,8 +6,9 @@ import Navbar from "../component/Navbar";
 import Footer from "../component/Footer";
 import axios from 'axios';
 
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 const Signup = () => {
+  const navigate = useNavigate();
     const [name,setName]=useState("");
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
@@ -16,12 +17,14 @@ const Signup = () => {
   
       const newUser = {name,email,password};
       try {
-       const response = await axios.post("http://localhost:8080/api/users", newUser);
-        console.log(response.data)
+       const response = await axios.post("http://localhost:8080/api/users/signup", newUser);
+       navigate('/login');
+        console.log(response)
       } catch (error) {
-        console.log(error)
+        console.log("dkfjksdf", error)
         
       }
+     
     };
   return (
     <div>
@@ -43,9 +46,9 @@ const Signup = () => {
               <input type="password" className="form-control" name="password" placeholder="Enter your password" onChange={(e)=>setPassword(e.target.value)}/>
             </div>
             <div className="SignIn">
-          <button onClick={handleSubmit} className="sign-in">Create Account</button>
+        <button onClick={handleSubmit} className="sign-in" >Create Account</button>
         </div>
-        <Link to='/'>Already user</Link>
+        <Link className='already' to='/login'>Already user</Link>
           
           
         </div>
