@@ -1,5 +1,6 @@
 import React from 'react'
 import './Navbar.css'
+import Contact from '../pages/Contact';
 import SearchIcon from '@mui/icons-material/Search';
 const Navbar = () => {
   return (
@@ -11,12 +12,12 @@ const Navbar = () => {
     </div>
     <div className='pages'>
         <ul>
-            <li><a href='/#'>Home</a></li>
+            <li><a href='/'>Home</a></li>
             <li><a href='/#'>Pages</a></li>
             <li><a href='/#'>Product</a></li>
             <li><a href='/#'>Shop</a></li>
             <li><a href='/#'>Blog</a></li>
-            <li><a href='/#'>Contact</a></li>
+            <li><a href='/contact'>Contact</a></li>
 
         </ul>
     </div>

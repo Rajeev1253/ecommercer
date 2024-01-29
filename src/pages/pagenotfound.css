@@ -1,0 +1,27 @@
+.notfound{
+    display: flex;
+    align-items: center;
+    height: 286px;
+    background-color: #f6f5ff;
+  }
+  .not-heading{
+    color: #101750;
+    font-family: "Josefin Sans";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding-left: 371px;
+    padding-bottom: 25px;
+  }
+  .img404{
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 133px;
+  }
+  .companies3{
+    display: flex;
+    margin-bottom: 109px;
+    justify-content: center;
+  }
